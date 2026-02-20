@@ -19,14 +19,11 @@ upstreams:
 routes:
   "POST /v1/messages":
     upstream: claude
-    match:
-      - where: { body.model: "claude-haiku-*" }
-        price: "$0.005"
-      - where: { body.model: "claude-sonnet-*" }
-        price: "$0.02"
-      - where: { body.model: "claude-opus-*" }
-        price: "$0.08"
-    fallback: "$0.02"
+    type: openai-compatible
+    models:
+      claude-haiku-4-5-20251001: "$0.001/1k-tokens"
+      claude-sonnet-4-5-20250929: "$0.005/1k-tokens"
+      claude-opus-4-6: "$0.02/1k-tokens"
     metadata:
       category: llm
       provider: anthropic
