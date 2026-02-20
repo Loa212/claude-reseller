@@ -1,0 +1,33 @@
+gateway:
+  port: 3000
+  discovery: true
+
+wallets:
+  base: "${PAY_TO_ADDRESS}"
+
+accepts:
+  - asset: USDC
+    network: base
+
+upstreams:
+  claude:
+    url: "https://api.anthropic.com"
+    headers:
+      x-api-key: "${ANTHROPIC_API_KEY}"
+      anthropic-version: "2023-06-01"
+
+routes:
+  "POST /v1/messages":
+    upstream: claude
+    match:
+      - where: { body.model: "claude-haiku-*" }
+        price: "$0.005"
+      - where: { body.model: "claude-sonnet-*" }
+        price: "$0.02"
+      - where: { body.model: "claude-opus-*" }
+        price: "$0.08"
+    fallback: "$0.02"
+    metadata:
+      category: llm
+      provider: anthropic
+      capabilities: [chat, code, analysis]
