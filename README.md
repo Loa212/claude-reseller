@@ -18,9 +18,9 @@ Token-based pricing — you pay for what you use, not a flat fee per request.
 
 | Model | Price |
 |-------|-------|
-| `claude-haiku-4-5-20251001` | $0.001 / 1k tokens |
-| `claude-sonnet-4-5-20250929` | $0.005 / 1k tokens |
-| `claude-opus-4-6` | $0.02 / 1k tokens |
+| `claude-haiku-4-5-20251001` | $0.006 / 1k tokens |
+| `claude-sonnet-4-5-20250929` | $0.025 / 1k tokens |
+| `claude-opus-4-6` | $0.12 / 1k tokens |
 
 Tollbooth reads `usage.prompt_tokens` + `usage.completion_tokens` from the response and charges accordingly.
 
