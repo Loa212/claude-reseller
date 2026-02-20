@@ -3,11 +3,11 @@ gateway:
   discovery: true
 
 wallets:
-  base-sepolia: "${PAY_TO_ADDRESS}"
+  base: "${PAY_TO_ADDRESS}"
 
 accepts:
   - asset: USDC
-    network: base-sepolia
+    network: base
 
 upstreams:
   claude:
