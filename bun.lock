@@ -5,7 +5,7 @@
     "": {
       "name": "claude-reseller",
       "dependencies": {
-        "x402-tollbooth": "^0.4.0",
+        "x402-tollbooth": "0.4.1",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -26,7 +26,7 @@
 
     "undici-types": ["undici-types@7.18.2", "", {}, "sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w=="],
 
-    "x402-tollbooth": ["x402-tollbooth@0.4.0", "", { "dependencies": { "yaml": "^2.7.0", "zod": "^3.24.0" }, "bin": { "tollbooth": "dist/cli.js", "x402-tollbooth": "dist/cli.js" } }, "sha512-TqORWDGXM09E3noPzhN9EsZZhJiS06glR7hN9h5rJZA810Y1lcP+G4OSMn8gv/lny/6ObVdzrAdGMkUcIC2Sng=="],
+    "x402-tollbooth": ["x402-tollbooth@0.4.1", "", { "dependencies": { "yaml": "^2.7.0", "zod": "^3.24.0" }, "bin": { "tollbooth": "dist/cli.js", "x402-tollbooth": "dist/cli.js" } }, "sha512-yvQWbcIaifh6kK2gNtj4iAvk1X5g4WVzY64xWQBV/qFNhNyQJbdr2RY1trTijE20ZCUs6ZpUFsGns6cigzVbcQ=="],
 
     "yaml": ["yaml@2.8.2", "", { "bin": { "yaml": "bin.mjs" } }, "sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A=="],
 
