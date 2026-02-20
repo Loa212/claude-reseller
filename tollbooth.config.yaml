@@ -19,7 +19,7 @@ upstreams:
 routes:
   "POST /v1/messages":
     upstream: claude
-    type: openai-compatible
+    type: token-based
     models:
       claude-haiku-4-5-20251001: "$0.001/1k-tokens"
       claude-sonnet-4-5-20250929: "$0.005/1k-tokens"
