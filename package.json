@@ -15,6 +15,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "viem": "^2.46.2",
     "x402-tollbooth": "0.4.1"
   }
 }

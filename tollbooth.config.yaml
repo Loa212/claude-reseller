@@ -1,13 +1,14 @@
 gateway:
   port: 3000
   discovery: true
+  facilitator: "${FACILITATOR_URL}"
 
 wallets:
-  base: "${PAY_TO_ADDRESS}"
+  "${NETWORK}": "${PAY_TO_ADDRESS}"
 
 accepts:
   - asset: USDC
-    network: base
+    network: "${NETWORK}"
 
 upstreams:
   claude:
@@ -21,9 +22,9 @@ routes:
     upstream: claude
     type: token-based
     models:
-      claude-haiku-4-5-20251001: "$0.006/1k-tokens"
-      claude-sonnet-4-5-20250929: "$0.025/1k-tokens"
-      claude-opus-4-6: "$0.12/1k-tokens"
+      claude-haiku-4-5-20251001: "$0.006"
+      claude-sonnet-4-5-20250929: "$0.025"
+      claude-opus-4-6: "$0.12"
     metadata:
       category: llm
       provider: anthropic
